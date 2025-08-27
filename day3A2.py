@@ -15,6 +15,7 @@ Use of for loops
 PIXEL_SIZE = 20
 
 PIXEL_ART_ARRAY = [
+    # numbers are 0-indexed
     #0-7
     ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "aquamarine", "aquamarine", "blue", "aquamarine", "aquamarine", "aquamarine", "blue", "blue", "blue", "blue", "blue", "blue", "blue", "aquamarine", "aquamarine", "white", "white", "white", "white", "white", "white"], #
     ["white", "white", "white", "white", "white", "white","white", "white", "white", "aquamarine", "aquamarine", "blue", "blue", "blue", "blue", "aquamarine", "blue", "blue", "brown", "blue", "blue", "blue", "blue", "blue", "blue", "blue", "blue", "brown", "white", "white", "white", "white"], #
@@ -42,8 +43,15 @@ PIXEL_ART_ARRAY = [
     ["white", "white", "white", "aquamarine", "aquamarine", "aquamarine", "aquamarine", "khaki", "firebrick", "firebrick", "maroon", "white", "white", "tan", "tan", "coral", "coral", "coral", "aquamarine", "aquamarine", "brown", "aquamarine", "aquamarine", "brown", "cyan", "cyan", "cyan", "gray", "brown", "brown", "brown", "white"], #
     ["white", "white", "white", "aquamarine", "gray", "gray", "gray", "aquamarine", "khaki", "cyan", "cyan", "maroon", "white", "tan", "orange", "tan", "tan", "coral", "aquamarine", "aquamarine", "brown", "brown", "brown", "brown", "brown", "brown", "brown", "brown", "white", "white", "white", "white"], #
     ["white", "white", "white", "aquamarine", "gray", "gray", "gray", "gray", "aquamarine", "khaki", "cyan", "cyan", "maroon", "white", "brown", "tan", "tan", "tan", "aquamarine", "blue", "blue", "brown", "brown", "khaki", "khaki", "aquamarine", "firebrick", "maroon", "white", "white", "white", "white"], #
- 
+    #24-29 
+    ["white", "white", "aquamarine", "gray", "gray", "gray", "aquamarine", "gray", "aquamarine", "white", "gray", "red", "maroon", "black", "black", "peach", "tan", "black", "blue", "blue", "blue", "blue", "aquamarine", "white", "white", "aquamarine", "red", "maroon", "white", "white", "white"], #
+    ["white", "white", "white", "black", "gray", "aquamarine", "gray", "gray", "aquamarine", "white", "red", "red", "maroon", "aquamarine", "aquamarine", "black", "black", "black", "black", "blue", "blue", "aquamarine", "aquamarine", "white", "cyan", "aquamarine", "white", "maroon", "white", "white", "white"], #
+    ["white", "white", "white", "black", "aquamarine", "gray", "gray", "aquamarine", "aquamarine", "aquamarine", "gray", "red", "red", "black", "aquamarine", "black", "white", "white", "white", "black", "black", "black", "black", "cyan", "cyan", "aquamarine", "white", "white", "maroon", "white", "white"], #
+    ["white", "white", "white", "white", "black", "gray", "aquamarine", "aquamarine", "aquamarine", "aquamarine", "cyan", "red", "red", "black", "black", "white", "white", "white", "white", "white", "white", "white", "black", "black", "aquamarine", "white", "white", "white", "maroon", "white", "white"], #
+    ["white", "white", "white", "white", "white", "black", "aquamarine", "aquamarine", "aquamarine", "aquamarine", "cyan", "red", "red", "black", "white", "white", "white", "white", "white","white", "white", "white", "white", "black", "white", "white", "red", "red", "maroon", "white", "white"], #
+    ["white", "white", "white", "white", "white", "white", "black", "aquamarine", "aquamarine", "aquamarine", "cyan", "red", "black", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "black", "red", "red", "red", "maroon", "white", "white"]#
 ]
+
 import turtle
 from turtle import *
 from random import randint
@@ -75,7 +83,7 @@ def draw_pixel(x,y,color):
 
     pen.end_fill()
 
-for y in range(0, 23):
+for y in range(0, 30):
     for x in range(32):
         draw_pixel(-320+PIXEL_SIZE*x,320+PIXEL_SIZE*y*-1, PIXEL_ART_ARRAY[y][x])
         print("y: ", y, "x:", x)
