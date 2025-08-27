@@ -1,4 +1,4 @@
-# imports randint function from random module
+# imports randint function from random module, to generate random integers
 from random import randint
 # constant list of elements
 FORTY_NINERS = ["abc", "xyz", "nmp", "agh", "diufh", "dahj", "dsf"]
